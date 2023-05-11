@@ -9,10 +9,14 @@ tmp/
 *.bak
 *.swp
 *~.nib
+Servers/
 local.properties
 .settings/
 .loadpath
 .recommenders
+.classpath
+.project
+.springBeans
 
 # External tool builders
 .externalToolBuilders/
