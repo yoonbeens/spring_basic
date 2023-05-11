@@ -1,0 +1,10 @@
+package com.spring.basic.controller;
+
+import org.springframework.stereotype.Controller;
+
+//자동으로 스프링 컨테이너에 해당 클래스의 빈을 등록하는 아노테이션.
+//빈을 등록해놔야 HandlerMapping이 이 클래스의 객체를 검색할 수 있다.
+@Controller
+public class RequestController {
+
+}

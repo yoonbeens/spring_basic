@@ -1,0 +1,22 @@
+package com.spring.basic.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+//자동으로 스프링 컨테이너에 해당 클래스의 빈을 등록하는 아노테이션.
+//빈을 등록해놔야 HandlerMapping이 이 클래스의 객체를 검색할 수 있다.
+@Controller //이름을 정해주지 않으면 클래스네임으로 된다.
+//@Controller("merong") 클래스 이름 말고 다른 이름으로도 가능
+public class RequestController {
+
+	public RequestController() {
+		System.out.println("RequestCon 생성!");
+	}
+	
+	@RequestMapping("/request/test")
+	public String testCall() {
+		System.out.println("/request/test 요청이 들어옴!");
+		return "test";
+	}
+	
+}
