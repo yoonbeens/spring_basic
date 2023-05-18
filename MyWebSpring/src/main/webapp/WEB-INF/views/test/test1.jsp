@@ -51,7 +51,7 @@
             2. http 요청 설정(요청 방식, 요청 URL)
             - 요청 방식
             a. GET - 조회select
-            b. POST - 등록insert
+            b. POST - 등록regist
             c. PUT - 수정update
             d. DELETE - 삭제delete
             */
