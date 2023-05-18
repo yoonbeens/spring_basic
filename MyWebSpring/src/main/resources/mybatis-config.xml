@@ -23,6 +23,7 @@
 	
 	<typeAliases>
 		<typeAlias type="com.spring.mywebspring.command.FreeBoardVO" alias="board" />
+		<typeAlias type="com.spring.mywebspring.command.UserVO" alias="user" />
 	</typeAliases>	
 	
 	
