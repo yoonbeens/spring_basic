@@ -55,7 +55,7 @@ public class MailSenderService {
 		MimeMessage message = mailSender.createMimeMessage();
 		//기타 설정들을 담당할 MimeMessageHelper 객체를 생성.
         //생성자의 매개값으로는 MimeMessage 객체, bool, 문자 인코딩 설정
-        //true 매개값을 전달하면 MultiPart 형식의 메세지 전달이 가능. (첨부 파일)
+        //true 매개값을 전달하면 MultiPart 형식의 메세지 전달이 가능. (첨부 파일: 이메일,오디오,이미지 등)
         //값을 전달하지 않는다면 단순 텍스트만 사용.
 		MimeMessageHelper helper;
 		try {
