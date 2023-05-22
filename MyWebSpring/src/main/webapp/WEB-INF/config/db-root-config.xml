@@ -52,6 +52,7 @@
 	 -->	
 	<mybatis-spring:scan base-package="com.spring.mywebspring.freeboard.mapper"/>
 	<mybatis-spring:scan base-package="com.spring.mywebspring.user.mapper"/>
+	<mybatis-spring:scan base-package="com.spring.mywebspring.reply.mapper"/>
 	<!-- Namespaces에서 mybatis 클릭 추가 -->
 		
 </beans>
