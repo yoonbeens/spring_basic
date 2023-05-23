@@ -41,6 +41,8 @@ public class UserLoginSuccessHandler implements HandlerInterceptor {
 		if(request.getMethod().equals("POST")) {
 			ModelMap map = modelAndView.getModelMap(); //모델 객체 꺼내기
 			String id = (String) map.get("user"); //모델 내의 user라는 이름의 데이터 꺼내기
+			//userController에서 가져옴
+			
 //			log.info("인터셉터 내부에서 user 확인: " + vo.toString());
 			
 			if(id != null) { //로그인 성공

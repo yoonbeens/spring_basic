@@ -18,12 +18,13 @@ public class ReplyService implements IReplyService {
 	@Autowired
 	private IReplyMapper mapper;
 	
+	@Autowired
 	private BCryptPasswordEncoder encoder;
 	
 	
 	@Override
 	public void replyRegist(ReplyVO vo) {
-		vo.setReplypw(encoder.encode(vo.getReplypw()));
+		vo.setReplyPw(encoder.encode(vo.getReplyPw()));
 		mapper.replyRegist(vo);
 	}
 
@@ -49,17 +50,18 @@ public class ReplyService implements IReplyService {
 	@Override
 	public boolean pwCheck(ReplyVO vo) {
 
-		return false;
+		String dbPw = mapper.pwCheck(vo.getRno());
+		return encoder.matches(vo.getReplyPw(), dbPw);
 	}
 
 	@Override
 	public void update(ReplyVO vo) {
-
+		mapper.update(vo);
 	}
 
 	@Override
 	public void delete(int rno) {
-
+		mapper.delete(rno);
 
 	}
 

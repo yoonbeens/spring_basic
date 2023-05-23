@@ -32,8 +32,8 @@ public class ReplyVO {
 	private int bno;
 	
 	private String reply;
-	private String replyid;
-	private String replypw;
+	private String replyId;
+	private String replyPw;
 	private LocalDateTime replyDate;
 	private LocalDateTime updateDate;
 	
