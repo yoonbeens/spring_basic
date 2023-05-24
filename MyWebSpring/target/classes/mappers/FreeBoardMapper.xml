@@ -39,7 +39,9 @@
 	</insert>
 	
 	<select id="getList" resultType="board"> <!-- mybatis-config as -->
-		SELECT * FROM freeboard
+	<!-- 조회된 값이 없을 때: 스칼라로 하면 0이 조회되고 조인으로 하면 NULL이 온다 -->
+		SELECT *, (SELECT COUNT(*) FROM freereply r WHERE b.bno = r.bno) AS reply_cnt
+		FROM freeboard b
 		<include refid="search" />
 		ORDER BY bno DESC
 		LIMIT #{pageStart}, #{cpp}
