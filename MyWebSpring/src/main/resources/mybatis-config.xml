@@ -25,6 +25,7 @@
 		<typeAlias type="com.spring.mywebspring.command.FreeBoardVO" alias="board" />
 		<typeAlias type="com.spring.mywebspring.command.UserVO" alias="user" />
 		<typeAlias type="com.spring.mywebspring.command.ReplyVO" alias="reply" />
+		<typeAlias type="com.spring.mywebspring.command.SnsBoardVO" alias="sns" />
 	</typeAliases>	
 	
 	
