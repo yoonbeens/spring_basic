@@ -89,6 +89,7 @@ public class SnsBoardController {
 		return file.delete() ? "success" : "fail"; // -> 삭제가 성공했다면 true, 실패하면 flase
 	}
 	
+	//다운로드
 	@GetMapping("/download/{fileLoca}/{fileName}")
 	public ResponseEntity<byte[]> download(@PathVariable String fileLoca, 
 											@PathVariable String fileName) {
