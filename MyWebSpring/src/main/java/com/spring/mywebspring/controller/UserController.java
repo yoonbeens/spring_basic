@@ -84,7 +84,7 @@ public class UserController {
 	
 	//카카오 로그인 성공 시 callback
 	@GetMapping("/kakao_callback")
-	public void callbackKakao(String code, String state, HttpSession session, Model model) {
+	public String callbackKakao(String code, String state, HttpSession session, Model model) {
 		log.info("로그인 성공! callbackKakao 호출!");
 		log.info("인가 코드: {}", code);
 		String accessToken = kakaoService.getAccessToken(session, code, state);
@@ -97,6 +97,7 @@ public class UserController {
 		//추가 입력 정보가 필요하다면 추가 입력할 수 있는 페이지로 보내셔서 입력을 더 받아서
 		//데이터베이스에 데이터를 집어넣으시면 됩니다.
 		
+		return "redirect:/";
 		
 	}
 	
